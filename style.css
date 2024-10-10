@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    background-color: black;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 10em; /* Ширина бічної панелі */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Прозорий фон */
+    padding: 1em; /* Внутрішній відступ */
+}
+
+.container {
+    font-size: 6px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+    flex-grow: 1; /* Дозволяє контейнеру заповнювати простір */
+}
+
+img {
+    height: 500%;
+    width: 500%;
+}
+
+.sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60em;
+    left: 100em;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0 0 3em rgb(255, 128, 0);
+    animation: orbit 50s linear infinite;
+}
+
+.planet {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    margin: 0.5em; /* Відстань між планетами */
+    background-size: cover;
+}
+
+.mercury { background-image: url('./images/mercury.png'); }
+.venus { background-image: url('./images/venus.png'); }
+.earth { background-image: url('./images/earth.png'); }
+.moon { background-image: url('./images/moon.png'); }
+.mars { background-image: url('./images/mars.png'); }
+.jupiter { background-image: url('./images/jupiter.png'); }
+.saturn { background-image: url('./images/saturn.png'); }
+.uranus { background-image: url('./images/uranus.png'); }
+.neptune { background-image: url('./images/neptune.png'); }
+.pluto { background-image: url('./images/pluto.png'); }
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
